@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+i{
+    cursor: pointer;
+}
+
+:root {
+    --nav-background: #394867;
+    --dark-mode:#212A3E;
+
+}
+.dark{
+    color: white;
+    background: var(--dark-mode);
+}
+.light{
+    color: var(--dark-mode);
+    background-color: white;
+}
+
+body{
+    transition: .4s ease-in-out;
+    position: relative;
+
+
+}
+nav {
+    padding-block: .5rem;
+    background-color: var(--nav-background);
+
+    .nav-container {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .nav-container img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50% 50%;
+    }
+
+    .notify-icon {
+        font-size: 1.5rem;
+        color: #fff;
+
+    }
+}
+
+/* ********* */
+.banner {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    h1{
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+}
+/* ********* */
+.menu {
+    width: 25%;
+    height: 70vh; 
+    overflow-y: scroll; 
+    position: absolute;
+    right: 5rem;
+    top: 4rem;
+    border: 1px solid rgba(0,0,0, .2);
+    z-index: 9;
+    display: none;
+    &.active{
+        display: block;
+    }
+    h2 {
+        position: relative;
+        padding: 1.5rem;
+        &>span {
+            color: red;
+
+        }
+    }
+    .notify-content{
+        position: relative;
+        .notify-item{
+            width: 100%;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+           border-block: 1px solid rgba(0,0,0, .2);
+            .notify-img{
+                width: 20%;
+                img{
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50% 50%;
+        
+                }
+            }
+            .notify-text{
+                width: 70%;
+            }
+    }
+    
+
+    }
+}
